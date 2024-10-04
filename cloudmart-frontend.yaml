@@ -16,6 +16,9 @@ spec:
       containers:
       - name: cloudmart-frontend-app
         image: FE_CONTAINER_IMAGE
+        envFrom:
+        - configMapRef:
+            name: frontend-config
 ---
 
 apiVersion: v1
